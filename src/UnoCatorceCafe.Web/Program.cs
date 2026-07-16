@@ -13,6 +13,22 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// Inicializar y sembrar base de datos
+using (var alcance = app.Services.CreateScope())
+{
+    var servicios = alcance.ServiceProvider;
+    try
+    {
+        var contexto = servicios.GetRequiredService<CafeteriaDbContext>();
+        await DbInicializador.Inicializar(contexto);
+    }
+    catch (Exception ex)
+    {
+        var logger = servicios.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Error sembrando base de datos inicial.");
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
