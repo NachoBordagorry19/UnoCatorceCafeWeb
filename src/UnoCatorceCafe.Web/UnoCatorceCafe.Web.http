@@ -1,0 +1,6 @@
+@UnoCatorceCafe.Web_HostAddress = http://localhost:5100
+
+GET {{UnoCatorceCafe.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
