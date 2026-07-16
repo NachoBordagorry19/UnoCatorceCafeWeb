@@ -1,6 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using UnoCatorceCafe.Web.Datos;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<CafeteriaDbContext>(opciones =>
+    opciones.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=cafeteria.db"));
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -21,3 +26,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }
