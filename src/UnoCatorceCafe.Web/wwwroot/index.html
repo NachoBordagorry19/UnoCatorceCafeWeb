@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:14 Café - Café de Especialidad en Cordón, Montevideo</title>
+    <meta name="description" content="Disfrutá del mejor café de especialidad y pastelería artesanal en Montevideo. Mirá nuestro menú interactivo y realizá tu pedido directamente por WhatsApp.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="1:14 Café - Café de Especialidad">
+    <meta property="og:description" content="Catálogo online interactivo y pedidos directos de café y pastelería en Cordón, Montevideo.">
+    <meta property="og:image" content="/images/latte_art_hero.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="app-header">
+        <div class="header-container">
+            <a href="#" class="logo">1:14<span>Café</span></a>
+            <nav class="nav-links">
+                <a href="#menu-seccion">Menú</a>
+                <a href="#horarios-seccion">Horarios</a>
+                <a href="#contacto-seccion">Ubicación</a>
+            </nav>
+            <div class="cart-btn-wrapper">
+                <button id="btn-ver-carrito" class="btn-cart" aria-label="Ver carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-badge-count" class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background-image: linear-gradient(rgba(17, 13, 11, 0.75), rgba(21, 17, 15, 0.95)), url('/images/latte_art_hero.jpg');">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fa-solid fa-mug-hot"></i> Café de Especialidad</span>
+                <h1 class="hero-title">Tu pausa perfecta en Cordón</h1>
+                <p class="hero-description">Granos seleccionados, filtrados de autor y pastelería artesanal horneada cada mañana en Joaquín de Salterain 1252.</p>
+                <div class="hero-actions">
+                    <a href="#menu-seccion" class="btn-primary">Explorar Menú</a>
+                    <a href="https://www.instagram.com/unocatorcecafe/" target="_blank" rel="noopener" class="btn-secondary">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horarios & Destacados Banner -->
+        <section id="horarios-seccion" class="info-strip">
+            <div class="info-card">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <h3>Horarios</h3>
+                    <p>Lunes a Sábado: 09:00 - 20:00 hs</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h3>Ubicación</h3>
+                    <p>J. de Salterain 1252, Cordón</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-wifi"></i>
+                <div>
+                    <h3>Servicios</h3>
+                    <p>WiFi de alta velocidad y mesas de trabajo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu-seccion" class="menu-container">
+            <div class="section-header">
+                <h2>Nuestro Menú</h2>
+                <p>Preparado con amor, técnica y precisión barista</p>
+            </div>
+
+            <!-- Categories Tabs -->
+            <div id="contenedor-categorias" class="categories-nav">
+                <!-- Se cargará dinámicamente -->
+                <div class="skeleton-loader width-medium height-tab"></div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="contenedor-productos" class="products-grid">
+                <!-- Se cargará dinámicamente -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </section>
+
+        <!-- Contact & Maps Section -->
+        <section id="contacto-seccion" class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Visitanos</h2>
+                    <p class="contact-text">Te esperamos para compartir una taza de café increíble. Podés tomar en el local, llevarte tu bebida favorita en formato Take Away, o pedir online.</p>
+                    <ul class="contact-details">
+                        <li><i class="fa-solid fa-map-location-dot"></i> Joaquín de Salterain 1252, Cordón, Montevideo</li>
+                        <li><i class="fa-solid fa-phone"></i> +598 94 114 114 (WhatsApp)</li>
+                        <li><i class="fa-solid fa-envelope"></i> hola@unocatorcecafe.com</li>
+                    </ul>
+                    <a href="https://maps.google.com/?q=Joaquin+de+Salterain+1252,+Montevideo" target="_blank" rel="noopener" class="btn-primary">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar (Google Maps)
+                    </a>
+                </div>
+                <div class="map-iframe-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.2471926685715!2d-56.170660623405786!3d-34.9002241728469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81cd4208a901%3A0xe54e6ebf544f83b1!2s1%3A14%20Caf%C3%A9!5e0!3m2!1ses!2suy!4v1700000000000!5m2!1ses!2suy" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de 1:14 Café en Google Maps"
+                        id="google-map-iframe">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Drawer (Offcanvas) -->
+    <div id="panel-carrito" class="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Tu Pedido</h3>
+            <button id="btn-cerrar-carrito" class="btn-close" aria-label="Cerrar carrito">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-drawer-body">
+            <div id="lista-carrito-items" class="cart-items-container">
+                <!-- Se cargará dinámicamente -->
+                <p class="empty-cart-message">Tu bolsa de compras está vacía.</p>
+            </div>
+            
+            <div id="resumen-valores-carrito" class="cart-summary" style="display: none;">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total estimado</span>
+                    <span id="cart-total">$0</span>
+                </div>
+                <button id="btn-iniciar-checkout" class="btn-checkout">Continuar con el Pedido</button>
+            </div>
+        </div>
+    </div>
+    <div id="overlay-carrito" class="cart-overlay"></div>
+
+    <!-- Checkout Modal -->
+    <div id="modal-checkout" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirmar Pedido por WhatsApp</h2>
+                <button id="btn-cerrar-modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Completá tus datos para que el local prepare tu orden. Te redirigiremos a WhatsApp para enviar el pedido estructurado.</p>
+                <form id="formulario-pedido">
+                    <div class="form-group">
+                        <label for="campo-nombre">Tu Nombre *</label>
+                        <input type="text" id="campo-nombre" required placeholder="Ej. Juan Pérez">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="campo-tipo-entrega">Tipo de Entrega *</label>
+                        <select id="campo-tipo-entrega" required>
+                            <option value="Take Away">Take Away (Retiro en local)</option>
+                            <option value="Delivery">Delivery (Envío a domicilio)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="grupo-direccion" style="display: none;">
+                        <label for="campo-direccion">Dirección de Envío *</label>
+                        <input type="text" id="campo-direccion" placeholder="Ej. J. de Salterain 1200, Apto 302">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="campo-pago">Método de Pago *</label>
+                        <select id="campo-pago" required>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Transferencia">Transferencia Bancaria</option>
+                            <option value="Débito/Crédito en local">Débito/Crédito (en local)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="campo-notas">Notas o Aclaraciones</label>
+                        <textarea id="campo-notas" rows="3" placeholder="Ej. Endulzante, sin hielo, alergias..."></textarea>
+                    </div>
+
+                    <button type="submit" id="btn-enviar-whatsapp" class="btn-send-wa">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar Pedido a Uno Catorce
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast-notificacion" class="toast">
+        <span id="toast-mensaje">Producto agregado al carrito.</span>
+    </div>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 1:14 Café. Todos los derechos reservados. Joaquín de Salterain 1252, Cordón, Montevideo.</p>
+        <p class="developer-tag">Diseñado para la máxima velocidad y comodidad. Creado por un barista digital.</p>
+    </footer>
+
+    <!-- Script Application -->
+    <script src="/app.js"></script>
+</body>
+</html>
