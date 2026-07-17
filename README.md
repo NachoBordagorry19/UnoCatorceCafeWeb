@@ -77,4 +77,3 @@ Proyecto personal de **Nacho Bordagorry**, desarrollado como MVP para demostrar 
 - Autenticación y autorización.
 - Despliegue público con configuración persistente.
 - Capturas o demo en video del flujo de compra.
-
